@@ -1,0 +1,334 @@
+w3c-libwww
+------------------------------------------
+Libwww is a highly modular, general-purpose client side Web API written 
+in C for Unix and Windows. It's well suited for both small and large 
+applications, like browser/editors, robots, batch tools, etc. Pluggable 
+modules provided with libwww include complete HTTP/1.1 (with caching, 
+pipelining, PUT, POST, Digest Authentication, deflate, etc), MySQL 
+logging, FTP, HTML/4, XML (expat), RDF (SiRPAC), WebDAV, and much more. 
+The purpose of libwww is to serve as a testbed for protocol experiments.
+
+Runtime requirements:
+  cygwin-1.5.25-7
+  libexpat0-1.95.8-2
+  libmysqlclient15-5.0.45-1
+  openssl-0.9.8g-1
+  zlib-1.2.3-2
+
+Build requirements:
+(besides corresponding -devel packages)
+  autoconf2.5-2.61-1
+  automake1.4-1.4p6-3
+  binutils-20060817-1
+  cygport-0.3.8-1
+  gawk-3.1.6-1
+  gcc-core-3.4.4-3
+  libtool1.5-1.5.23a-2
+  make-3.81-1
+  sed-4.1.5-2
+
+Canonical website:
+  http://www.w3.org/Library/
+
+Canonical download:
+  http://www.w3.org/Library/Distribution/
+
+-------------------------------------------
+
+Build instructions:
+  unpack w3c-libwww-5.4.0-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./w3c-libwww-5.4.0-X.cygport all
+
+This will create:
+  /usr/src/libwww-devel-5.4.0-X.tar.bz2
+  /usr/src/libwww0-5.4.0-X.tar.bz2
+  /usr/src/w3c-libwww-5.4.0-X-src.tar.bz2
+  /usr/src/w3c-libwww-5.4.0-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+(w3c-libwww)
+  /usr/bin/w3c.exe
+  /usr/bin/webbot.exe
+  /usr/bin/www.exe
+  /usr/share/doc/w3c-libwww-5.4.0/ChangeLog
+  /usr/share/doc/w3c-libwww-5.4.0/html/COPYRIGHT.html
+  /usr/share/doc/w3c-libwww-5.4.0/html/INSTALL.html
+  /usr/share/doc/w3c-libwww-5.4.0/html/LICENSE.html
+  /usr/share/doc/w3c-libwww-5.4.0/html/PATCHES.html
+  /usr/share/doc/w3c-libwww-5.4.0/html/README.html
+
+(libwww0)
+  /usr/bin/cygmd5-0.dll
+  /usr/bin/cygpics-0.dll
+  /usr/bin/cygwwwapp-0.dll
+  /usr/bin/cygwwwcache-0.dll
+  /usr/bin/cygwwwcore-0.dll
+  /usr/bin/cygwwwdav-0.dll
+  /usr/bin/cygwwwdir-0.dll
+  /usr/bin/cygwwwfile-0.dll
+  /usr/bin/cygwwwftp-0.dll
+  /usr/bin/cygwwwgopher-0.dll
+  /usr/bin/cygwwwhtml-0.dll
+  /usr/bin/cygwwwhttp-0.dll
+  /usr/bin/cygwwwinit-0.dll
+  /usr/bin/cygwwwmime-0.dll
+  /usr/bin/cygwwwmux-0.dll
+  /usr/bin/cygwwwnews-0.dll
+  /usr/bin/cygwwwsql-0.dll
+  /usr/bin/cygwwwssl-0.dll
+  /usr/bin/cygwwwstream-0.dll
+  /usr/bin/cygwwwtelnet-0.dll
+  /usr/bin/cygwwwtrans-0.dll
+  /usr/bin/cygwwwutils-0.dll
+  /usr/bin/cygwwwxml-0.dll
+  /usr/bin/cygwwwzip-0.dll
+  /usr/share/w3c-libwww/back.xbm
+  /usr/share/w3c-libwww/binary.xbm
+  /usr/share/w3c-libwww/binhex.xbm
+  /usr/share/w3c-libwww/blank.xbm
+  /usr/share/w3c-libwww/compressed.xbm
+  /usr/share/w3c-libwww/directory.xbm
+  /usr/share/w3c-libwww/doc.xbm
+  /usr/share/w3c-libwww/dummy.xbm
+  /usr/share/w3c-libwww/ftp.xbm
+  /usr/share/w3c-libwww/gzip.xbm
+  /usr/share/w3c-libwww/image.xbm
+  /usr/share/w3c-libwww/index.xbm
+  /usr/share/w3c-libwww/index2.xbm
+  /usr/share/w3c-libwww/movie.xbm
+  /usr/share/w3c-libwww/sound.xbm
+  /usr/share/w3c-libwww/tar.xbm
+  /usr/share/w3c-libwww/telnet.xbm
+  /usr/share/w3c-libwww/text.xbm
+  /usr/share/w3c-libwww/unknown.doc.xbm
+  /usr/share/w3c-libwww/unknown.old.xbm
+  /usr/share/w3c-libwww/unknown.xbm
+  /usr/share/w3c-libwww/uu.xbm
+
+(libwww-devel)
+  /usr/bin/libwww-config
+  /usr/include/w3c-libwww/HTAABrow.h
+  /usr/include/w3c-libwww/HTAAUtil.h
+  /usr/include/w3c-libwww/HTANSI.h
+  /usr/include/w3c-libwww/HTAccess.h
+  /usr/include/w3c-libwww/HTAlert.h
+  /usr/include/w3c-libwww/HTAncMan.h
+  /usr/include/w3c-libwww/HTAnchor.h
+  /usr/include/w3c-libwww/HTArray.h
+  /usr/include/w3c-libwww/HTAssoc.h
+  /usr/include/w3c-libwww/HTAtom.h
+  /usr/include/w3c-libwww/HTBInit.h
+  /usr/include/w3c-libwww/HTBTree.h
+  /usr/include/w3c-libwww/HTBind.h
+  /usr/include/w3c-libwww/HTBound.h
+  /usr/include/w3c-libwww/HTBufWrt.h
+  /usr/include/w3c-libwww/HTCache.h
+  /usr/include/w3c-libwww/HTChannl.h
+  /usr/include/w3c-libwww/HTChunk.h
+  /usr/include/w3c-libwww/HTConLen.h
+  /usr/include/w3c-libwww/HTCookie.h
+  /usr/include/w3c-libwww/HTDAV.h
+  /usr/include/w3c-libwww/HTDNS.h
+  /usr/include/w3c-libwww/HTDemux.h
+  /usr/include/w3c-libwww/HTDescpt.h
+  /usr/include/w3c-libwww/HTDialog.h
+  /usr/include/w3c-libwww/HTDigest.h
+  /usr/include/w3c-libwww/HTDir.h
+  /usr/include/w3c-libwww/HTEPtoCl.h
+  /usr/include/w3c-libwww/HTError.h
+  /usr/include/w3c-libwww/HTEscape.h
+  /usr/include/w3c-libwww/HTEvent.h
+  /usr/include/w3c-libwww/HTEvtLst.h
+  /usr/include/w3c-libwww/HTFSave.h
+  /usr/include/w3c-libwww/HTFTP.h
+  /usr/include/w3c-libwww/HTFTPDir.h
+  /usr/include/w3c-libwww/HTFWrite.h
+  /usr/include/w3c-libwww/HTFile.h
+  /usr/include/w3c-libwww/HTFilter.h
+  /usr/include/w3c-libwww/HTFormat.h
+  /usr/include/w3c-libwww/HTGopher.h
+  /usr/include/w3c-libwww/HTGuess.h
+  /usr/include/w3c-libwww/HTHInit.h
+  /usr/include/w3c-libwww/HTHash.h
+  /usr/include/w3c-libwww/HTHeader.h
+  /usr/include/w3c-libwww/HTHist.h
+  /usr/include/w3c-libwww/HTHome.h
+  /usr/include/w3c-libwww/HTHost.h
+  /usr/include/w3c-libwww/HTHstMan.h
+  /usr/include/w3c-libwww/HTIOStream.h
+  /usr/include/w3c-libwww/HTIcons.h
+  /usr/include/w3c-libwww/HTInet.h
+  /usr/include/w3c-libwww/HTInit.h
+  /usr/include/w3c-libwww/HTLib.h
+  /usr/include/w3c-libwww/HTLink.h
+  /usr/include/w3c-libwww/HTList.h
+  /usr/include/w3c-libwww/HTLocal.h
+  /usr/include/w3c-libwww/HTLog.h
+  /usr/include/w3c-libwww/HTMIME.h
+  /usr/include/w3c-libwww/HTMIMERq.h
+  /usr/include/w3c-libwww/HTMIMImp.h
+  /usr/include/w3c-libwww/HTMIMPrs.h
+  /usr/include/w3c-libwww/HTML.h
+  /usr/include/w3c-libwww/HTMLGen.h
+  /usr/include/w3c-libwww/HTMLPDTD.h
+  /usr/include/w3c-libwww/HTMemLog.h
+  /usr/include/w3c-libwww/HTMemory.h
+  /usr/include/w3c-libwww/HTMerge.h
+  /usr/include/w3c-libwww/HTMethod.h
+  /usr/include/w3c-libwww/HTMulpar.h
+  /usr/include/w3c-libwww/HTMulti.h
+  /usr/include/w3c-libwww/HTMuxCh.h
+  /usr/include/w3c-libwww/HTMuxHeader.h
+  /usr/include/w3c-libwww/HTMuxTx.h
+  /usr/include/w3c-libwww/HTNDir.h
+  /usr/include/w3c-libwww/HTNet.h
+  /usr/include/w3c-libwww/HTNetMan.h
+  /usr/include/w3c-libwww/HTNetTxt.h
+  /usr/include/w3c-libwww/HTNews.h
+  /usr/include/w3c-libwww/HTNewsLs.h
+  /usr/include/w3c-libwww/HTNewsRq.h
+  /usr/include/w3c-libwww/HTNoFree.h
+  /usr/include/w3c-libwww/HTPEP.h
+  /usr/include/w3c-libwww/HTParse.h
+  /usr/include/w3c-libwww/HTPlain.h
+  /usr/include/w3c-libwww/HTProfil.h
+  /usr/include/w3c-libwww/HTProt.h
+  /usr/include/w3c-libwww/HTProxy.h
+  /usr/include/w3c-libwww/HTRDF.h
+  /usr/include/w3c-libwww/HTReader.h
+  /usr/include/w3c-libwww/HTReq.h
+  /usr/include/w3c-libwww/HTReqMan.h
+  /usr/include/w3c-libwww/HTResMan.h
+  /usr/include/w3c-libwww/HTResponse.h
+  /usr/include/w3c-libwww/HTRules.h
+  /usr/include/w3c-libwww/HTSChunk.h
+  /usr/include/w3c-libwww/HTSQL.h
+  /usr/include/w3c-libwww/HTSQLLog.h
+  /usr/include/w3c-libwww/HTSSL.h
+  /usr/include/w3c-libwww/HTSSLMan.h
+  /usr/include/w3c-libwww/HTSSLReader.h
+  /usr/include/w3c-libwww/HTSSLWriter.h
+  /usr/include/w3c-libwww/HTSSLhttps.h
+  /usr/include/w3c-libwww/HTSocket.h
+  /usr/include/w3c-libwww/HTStream.h
+  /usr/include/w3c-libwww/HTString.h
+  /usr/include/w3c-libwww/HTStruct.h
+  /usr/include/w3c-libwww/HTStyle.h
+  /usr/include/w3c-libwww/HTTCP.h
+  /usr/include/w3c-libwww/HTTChunk.h
+  /usr/include/w3c-libwww/HTTP.h
+  /usr/include/w3c-libwww/HTTPGen.h
+  /usr/include/w3c-libwww/HTTPReq.h
+  /usr/include/w3c-libwww/HTTPRes.h
+  /usr/include/w3c-libwww/HTTPServ.h
+  /usr/include/w3c-libwww/HTTPUtil.h
+  /usr/include/w3c-libwww/HTTeXGen.h
+  /usr/include/w3c-libwww/HTTee.h
+  /usr/include/w3c-libwww/HTTelnet.h
+  /usr/include/w3c-libwww/HTTimer.h
+  /usr/include/w3c-libwww/HTTrans.h
+  /usr/include/w3c-libwww/HTUTree.h
+  /usr/include/w3c-libwww/HTUU.h
+  /usr/include/w3c-libwww/HTUser.h
+  /usr/include/w3c-libwww/HTUtils.h
+  /usr/include/w3c-libwww/HTWAIS.h
+  /usr/include/w3c-libwww/HTWSRC.h
+  /usr/include/w3c-libwww/HTWWWStr.h
+  /usr/include/w3c-libwww/HTWriter.h
+  /usr/include/w3c-libwww/HTXML.h
+  /usr/include/w3c-libwww/HTXParse.h
+  /usr/include/w3c-libwww/HTZip.h
+  /usr/include/w3c-libwww/HText.h
+  /usr/include/w3c-libwww/HTextImp.h
+  /usr/include/w3c-libwww/SGML.h
+  /usr/include/w3c-libwww/WWWApp.h
+  /usr/include/w3c-libwww/WWWCache.h
+  /usr/include/w3c-libwww/WWWCore.h
+  /usr/include/w3c-libwww/WWWDir.h
+  /usr/include/w3c-libwww/WWWFTP.h
+  /usr/include/w3c-libwww/WWWFile.h
+  /usr/include/w3c-libwww/WWWGophe.h
+  /usr/include/w3c-libwww/WWWHTML.h
+  /usr/include/w3c-libwww/WWWHTTP.h
+  /usr/include/w3c-libwww/WWWInit.h
+  /usr/include/w3c-libwww/WWWLib.h
+  /usr/include/w3c-libwww/WWWMIME.h
+  /usr/include/w3c-libwww/WWWMux.h
+  /usr/include/w3c-libwww/WWWNews.h
+  /usr/include/w3c-libwww/WWWSQL.h
+  /usr/include/w3c-libwww/WWWSSL.h
+  /usr/include/w3c-libwww/WWWStream.h
+  /usr/include/w3c-libwww/WWWTelnt.h
+  /usr/include/w3c-libwww/WWWTrans.h
+  /usr/include/w3c-libwww/WWWUtil.h
+  /usr/include/w3c-libwww/WWWWAIS.h
+  /usr/include/w3c-libwww/WWWXML.h
+  /usr/include/w3c-libwww/WWWZip.h
+  /usr/include/w3c-libwww/wwwsys.h
+  /usr/include/w3c-libwww/xmlparse.h
+  /usr/include/wwwconf.h
+  /usr/lib/libmd5.dll.a
+  /usr/lib/libmd5.la
+  /usr/lib/libpics.dll.a
+  /usr/lib/libpics.la
+  /usr/lib/libwwwapp.dll.a
+  /usr/lib/libwwwapp.la
+  /usr/lib/libwwwcache.dll.a
+  /usr/lib/libwwwcache.la
+  /usr/lib/libwwwcore.dll.a
+  /usr/lib/libwwwcore.la
+  /usr/lib/libwwwdav.dll.a
+  /usr/lib/libwwwdav.la
+  /usr/lib/libwwwdir.dll.a
+  /usr/lib/libwwwdir.la
+  /usr/lib/libwwwfile.dll.a
+  /usr/lib/libwwwfile.la
+  /usr/lib/libwwwftp.dll.a
+  /usr/lib/libwwwftp.la
+  /usr/lib/libwwwgopher.dll.a
+  /usr/lib/libwwwgopher.la
+  /usr/lib/libwwwhtml.dll.a
+  /usr/lib/libwwwhtml.la
+  /usr/lib/libwwwhttp.dll.a
+  /usr/lib/libwwwhttp.la
+  /usr/lib/libwwwinit.dll.a
+  /usr/lib/libwwwinit.la
+  /usr/lib/libwwwmime.dll.a
+  /usr/lib/libwwwmime.la
+  /usr/lib/libwwwmux.dll.a
+  /usr/lib/libwwwmux.la
+  /usr/lib/libwwwnews.dll.a
+  /usr/lib/libwwwnews.la
+  /usr/lib/libwwwsql.dll.a
+  /usr/lib/libwwwsql.la
+  /usr/lib/libwwwssl.dll.a
+  /usr/lib/libwwwssl.la
+  /usr/lib/libwwwstream.dll.a
+  /usr/lib/libwwwstream.la
+  /usr/lib/libwwwtelnet.dll.a
+  /usr/lib/libwwwtelnet.la
+  /usr/lib/libwwwtrans.dll.a
+  /usr/lib/libwwwtrans.la
+  /usr/lib/libwwwutils.dll.a
+  /usr/lib/libwwwutils.la
+  /usr/lib/libwwwxml.dll.a
+  /usr/lib/libwwwxml.la
+  /usr/lib/libwwwzip.dll.a
+  /usr/lib/libwwwzip.la
+
+------------------
+
+Port Notes:
+
+----- version 5.4.0-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
