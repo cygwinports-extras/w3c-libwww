@@ -1,0 +1,51 @@
+DESCRIPTION="W3C Protocol library"
+HOMEPAGE="http://www.w3.org/Library/"
+SRC_URI="http://www.w3.org/Library/Distribution/${P}.tgz"
+
+gentoo_patchsets="http://sources.gentoo.org/viewcvs.py/*checkout*/gentoo/src/patchsets/libwww/${PV}"
+
+PATCH_URI="
+	${gentoo_patchsets}/03_all_libwww-5.4.0-debian-autoconf-2.5.patch
+	${gentoo_patchsets}/05_all_libwww-5.4.0-config-liborder.patch
+	${gentoo_patchsets}/09_all_libwww-5.4.0-libssl.patch
+	${gentoo_patchsets}/11_all_libwww-5.4.0-automake-gentoo.patch
+	${gentoo_patchsets}/16_all_libwww-5.4.0-disable-ndebug-gentoo.patch
+	${gentoo_patchsets}/25_all_libwww-5.4.0-mysql-4.0.patch
+	${gentoo_patchsets}/27_all_libwww-5.4.0-htbound.patch
+	${gentoo_patchsets}/30_all_libwww-5.4.0-asneeded.patch
+	${gentoo_patchsets}/36_all_libwww-5.4.0-noexport.patch
+	${gentoo_patchsets}/50_all_libwww-5.4.0-respectflags.patch
+"
+
+PKG_NAMES="${PN} libwww0 libwww-devel"
+PKG_HINTS="setup lib devel"
+PKG_CONTENTS[0]="usr/bin/*.exe usr/share/doc/"
+PKG_CONTENTS[1]="usr/bin/*.dll usr/share/${PN}/"
+PKG_CONTENTS[2]="usr/bin/*-config usr/include/ usr/lib/"
+
+DIFF_EXCLUDES="stamp-h.in wwwconf.h.in"
+
+src_compile() {
+	cd ${S}
+	WANT_AUTOMAKE=1.7
+	ACLOCAL="aclocal-${WANT_AUTOMAKE}"
+	cygautoreconf
+
+	cd ${B}
+	cygconf \
+		--datadir=/usr/share \
+		--enable-shared --disable-static \
+		--with-dav \
+		--with-expat \
+		--with-extension \
+		--with-md5 \
+		--with-mysql=/usr/lib/mysql/libmysqlclient.dll.a \
+		--with-ssl \
+		--with-zlib=/usr/lib/libz.dll.a \
+		ac_cv_header_appkit_appkit_h=no
+	cygmake \
+		LDFLAGS=-no-undefined \
+		libwwwdir_la_LDFLAGS="-export-symbols ${S}/Library/src/libwwwdir.def"
+}
+
+HTMLDOCS="*.html"

@@ -1,5 +1,5 @@
 category: Web Libs
-requires: cygwin libexpat0 libmysqlclient15 openssl zlib
+requires: cygwin libexpat1 libmysqlclient15 openssl zlib
 external-source: w3c-libwww
 sdesc: "W3C Protocol library (runtime)"
 ldesc: "Libwww is a highly modular, general-purpose client side Web API 

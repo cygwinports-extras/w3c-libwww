@@ -9,9 +9,9 @@ logging, FTP, HTML/4, XML (expat), RDF (SiRPAC), WebDAV, and much more.
 The purpose of libwww is to serve as a testbed for protocol experiments.
 
 Runtime requirements:
-  cygwin-1.5.25-7
-  libexpat0-1.95.8-2
-  libmysqlclient15-5.0.45-1
+  cygwin-1.5.25-11
+  libexpat1-2.0.1-1
+  libmysqlclient15-5.0.51-1
   openssl-0.9.8g-1
   zlib-1.2.3-2
 
@@ -325,6 +325,9 @@ Files included in the binary package:
 ------------------
 
 Port Notes:
+
+----- version 5.4.0-2 -----
+Rebuilt for expat-2.0.
 
 ----- version 5.4.0-1 -----
 Initial release for Cygwin.
